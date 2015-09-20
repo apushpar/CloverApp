@@ -1,0 +1,53 @@
+<div class="row">
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" ng-click='add("Batman and Robin cupcakes", 2)'>
+                    <img class="img-responsive" src="https://c1.staticflickr.com/5/4017/4304792081_016851695c.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" ng-click='add("Assorted Farm Animals", 5)'>
+                    <img class="img-responsive" src="https://c1.staticflickr.com/5/4045/4441741978_e0757cb7bb.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" ng-click='add("Cats collection",3)'>
+                    <img class="img-responsive" src="https://c2.staticflickr.com/4/3231/3110878899_1580b2ed80.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" ng-click='add("Mom Love!", 1.5)'>
+                    <img class="img-responsive" src="https://c2.staticflickr.com/4/3381/4592972238_ee6b9898c2_b.jpg" alt="">
+                </a>
+            </div>
+            
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-4">
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                
+                <th>Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="x in orders">
+                <td>{{ $index+1 }}</td>
+                <td>{{ x.name }}</td>
+                <td>{{ x.cost }}</td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-md-offset-8">
+            <button type="button" id="payNow" ng-click="clickOnPay()" class="btn btn-primary btn-lg">
+              {{pay_info}}
+            </button>
+          </div>
+        </div>
+
+    </div>
